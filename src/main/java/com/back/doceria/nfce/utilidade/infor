@@ -1,0 +1,10 @@
+utils:
+
+Pacote auxiliar que fornece métodos reutilizáveis e genéricos.
+Exemplo:
+Validações:
+CpfValidator e CnpjValidator: Métodos para validar o formato de CPF e CNPJ.
+Formatação:
+Formatter: Para padronizar valores como ###.###.###-## para CPF.
+
+

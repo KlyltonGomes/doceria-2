@@ -1,0 +1,8 @@
+ntegration:
+
+Lida com a comunicação com os serviços da SEFAZ.
+Exemplo:
+SefazClient: Classe que gerencia as requisições SOAP.
+XmlSigner: Para assinar o XML com o certificado digital.
+SefazResponseHandler: Para interpretar as respostas da SEFAZ.
+Esse pacote deve ser projetado para lidar com a conectividade e eventuais falhas de comunicação de forma robusta.

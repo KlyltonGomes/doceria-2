@@ -1,0 +1,44 @@
+Guia de Uso da Classe FormatarCPFeCNPJ
+Introdução
+A classe FormatarCPFeCNPJ é uma classe utilitária para manipulação de dados de CPF e CNPJ. Ela permite remover caracteres de formatação,
+como pontos (.), traços (-) e barras (/), deixando os valores prontos para serem processados ou enviados para a SEFAZ.
+
+Cenário de Uso:
+
+O valor de CPF ou CNPJ está armazenado no banco de dados como texto, incluindo caracteres de formatação (ex.: 052.951.033-23).
+Antes de enviar os dados para a SEFAZ, é necessário remover a formatação e, se necessário, converter o valor para um tipo numérico (int ou long).
+Exemplo de Uso
+Considere o seguinte valor de CPF armazenado como texto:
+
+java
+Copiar código
+String cpf = "052.951.033-23";
+Para remover os caracteres de formatação, use o método estático da classe:
+
+java
+Copiar código
+String cpfFormatado = FormatarCPFeCNPJ.removerFormatacao(cpf);
+System.out.println(cpfFormatado); // Saída: 05295103323
+Observações
+A classe FormatarCPFeCNPJ é uma classe utilitária. Por isso:
+
+Ela possui um construtor privado, impedindo a criação de objetos.
+Todos os métodos são estáticos, permitindo acesso direto pela classe.
+Não tente instanciar a classe diretamente. Isso resultará em um erro:
+
+java
+Copiar código
+// Código incorreto:
+FormatarCPFeCNPJ formatar = new FormatarCPFeCNPJ(); // Erro!
+Utilize a forma correta:
+
+java
+Copiar código
+// Código correto:
+String cpfFormatado = FormatarCPFeCNPJ.removerFormatacao(cpf);
+Principais Vantagens
+Reutilizável: Pode ser chamada em qualquer parte do código, sem a necessidade de criar um objeto.
+Simplicidade: Foca em uma funcionalidade específica, facilitando a compreensão e manutenção do código.
+Consistência: Garante que os valores de CPF e CNPJ estejam sempre no formato correto antes do envio.
+Conclusão
+A classe FormatarCPFeCNPJ é essencial para lidar com a formatação de CPF e CNPJ em projetos que envolvem comunicação com a SEFAZ ou outros sistemas que exigem valores numéricos. Utilize-a corretamente para evitar erros e garantir um código limpo e funcional.

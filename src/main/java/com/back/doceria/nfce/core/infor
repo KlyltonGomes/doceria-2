@@ -1,0 +1,9 @@
+core:
+
+Centraliza a lógica principal do sistema.
+Responsável por gerar os XMLs conforme os layouts da SEFAZ.
+Inclui cálculos de tributos, assinaturas digitais, e regras de negócio.
+Classes sugeridas:
+XmlGenerator: Para construir o XML.
+TaxCalculator: Para cálculo de tributos.
+NfceService: O serviço principal para emissão e gerenciamento de NFC-e.
