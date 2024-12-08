@@ -1,0 +1,72 @@
+
+A Chave de Acesso de um documento fiscal eletrônico (como NFC-e) é composta de forma padronizada, totalizando 44 caracteres. Aqui está o detalhamento da construção e como você pode implementá-la em Java:
+
+Componentes da Chave de Acesso
+Campo	Tamanho	Descrição
+cUF	02	Código da UF do emitente, conforme a tabela do IBGE. Ex.: SP = 35.
+AAMM	04	Ano e mês de emissão do documento fiscal. Ex.: 202412 (dezembro de 2024).
+CNPJ	14	CNPJ do emitente (apenas números, sem formatação).
+mod	02	Modelo do documento fiscal. Ex.: NFC-e = 65.
+serie	03	Série do documento fiscal.
+nNF	09	Número sequencial da nota fiscal.
+tpEmis	01	Tipo de emissão. Ex.: Normal = 1, Contingência = 2.
+cNF	08	Código numérico único gerado pelo emitente.
+cDV	01	Dígito verificador da chave, calculado com base no módulo 11.
+Implementação em Java
+1. Gerar a Chave de Acesso
+java
+Copiar código
+public class GeradorChaveAcesso {
+
+    public static String gerarChaveAcesso(String cUF, String aaMM, String cnpj, String modelo, String serie,
+                                          String numeroNFe, String tipoEmissao, String codigoNumerico) {
+        // Concatenar os elementos da chave
+        String chaveSemDV = cUF + aaMM + cnpj + modelo + serie + numeroNFe + tipoEmissao + codigoNumerico;
+
+        // Calcular o dígito verificador
+        int dv = calcularDigitoVerificador(chaveSemDV);
+
+        // Retornar a chave de acesso completa
+        return chaveSemDV + dv;
+    }
+
+    private static int calcularDigitoVerificador(String chaveSemDV) {
+        int peso = 2;
+        int soma = 0;
+
+        // Percorrer a chave de trás para frente
+        for (int i = chaveSemDV.length() - 1; i >= 0; i--) {
+            int num = Character.getNumericValue(chaveSemDV.charAt(i));
+            soma += num * peso;
+
+            // Ajustar peso
+            peso = (peso < 9) ? peso + 1 : 2;
+        }
+
+        // Calcular o módulo 11
+        int resto = soma % 11;
+        int dv = (resto == 0 || resto == 1) ? 0 : 11 - resto;
+
+        return dv;
+    }
+}
+2. Exemplo de Uso
+java
+Copiar código
+public class TesteChaveAcesso {
+    public static void main(String[] args) {
+        String cUF = "35";              // SP
+        String aaMM = "202412";         // Dezembro de 2024
+        String cnpj = "12345678000195"; // CNPJ do emitente
+        String modelo = "65";           // NFC-e
+        String serie = "001";           // Série
+        String numeroNFe = "123456789"; // Número da NFC-e
+        String tipoEmissao = "1";       // Normal
+        String codigoNumerico = "12345678"; // Código gerado
+
+        // Gerar a chave de acesso
+        String chaveAcesso = GeradorChaveAcesso.gerarChaveAcesso(cUF, aaMM, cnpj, modelo, serie, numeroNFe, tipoEmissao, codigoNumerico);
+
+        System.out.println("Chave de Acesso: " + chaveAcesso);
+    }
+}

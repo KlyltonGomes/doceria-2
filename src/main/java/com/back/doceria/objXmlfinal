@@ -1,0 +1,23 @@
+public class Main {
+    public static void main(String[] args) throws JAXBException {
+        // Criar objeto de Nfe com dados fictícios
+        Emitente emitente = new Emitente();
+        emitente.setCnpj("12345678000195");
+        emitente.setNome("Doceria Doces");
+
+        Destinatario destinatario = new Destinatario();
+        destinatario.setCnpj("98765432000196");
+        destinatario.setNome("Loja de Roupas");
+
+        Nfe nfe = new Nfe();
+        nfe.setEmit(emitente);
+        nfe.setDest(destinatario);
+        // Adicionar outros dados conforme necessário
+
+        // Gerar XML
+        NfeXmlGenerator generator = new NfeXmlGenerator();
+        String xml = generator.gerarXml(nfe);
+
+        System.out.println(xml);
+    }
+}

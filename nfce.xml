@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Nfce>
+    <emit>
+        <CNPJ>12345678000195</CNPJ>
+        <xNome>Doceria da Renata</xNome>
+    </emit>
+    <prod>
+        <cProd>001</cProd>
+        <xProd>Bolo de Chocolate</xProd>
+        <qCom>1</qCom>
+        <vUnCom>50.0</vUnCom>
+        <vProd>50.0</vProd>
+    </prod>
+    <total>50.0</total>
+    <formaPagamento>Dinheiro</formaPagamento>
+</Nfce>
