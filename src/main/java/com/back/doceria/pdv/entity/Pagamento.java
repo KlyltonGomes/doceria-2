@@ -21,4 +21,7 @@ public class Pagamento {
     private Long id;
     private String forma;
     private double valor;
+
+   // private String tPag; // Tipo de pagamento (01 = dinheiro, 03 = cartão de crédito, etc.)
+    //private String vPag; // Valor do pagamento
 }

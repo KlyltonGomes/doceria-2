@@ -1,3 +1,4 @@
+/*
 package com.back.doceria.pdv.dto;
 
 import jakarta.xml.bind.annotation.XmlElement;
@@ -57,3 +58,4 @@ public class ProdutoXml {
     }
 }
 
+*/

@@ -2,10 +2,18 @@ package com.back.doceria.nfce.utilidade;
 
 public class GeradorChaveAcesso {
 
-    public static String gerarChaveAcesso(String cUF, String aaMM, String cnpj, String modelo, String serie,
-                                          String numeroNFe, String tipoEmissao, String codigoNumerico) {
+
+    public static String gerarChaveAcesso(Integer cUF, Integer aaMM, String cnpj, Integer modelo, Integer serie,
+                                          Integer numeroNFe, Integer tipoEmissao, Integer codigoNumerico) {
+
+
+
+
+
         // Concatenar os elementos da chave
-        String chaveSemDV = cUF + aaMM + cnpj + modelo + serie + numeroNFe + tipoEmissao + codigoNumerico;
+        String chaveSemDV = cUF.toString() + aaMM + cnpj + modelo.toString() +
+                serie.toString() + numeroNFe.toString() +
+                tipoEmissao.toString() + codigoNumerico.toString();
 
         // Calcular o dígito verificador
         int dv = calcularDigitoVerificador(chaveSemDV);
@@ -33,7 +41,4 @@ public class GeradorChaveAcesso {
 
         return dv;
     }
-
-
-
 }

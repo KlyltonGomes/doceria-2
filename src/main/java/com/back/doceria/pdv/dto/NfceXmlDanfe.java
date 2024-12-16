@@ -1,14 +1,14 @@
+/*
 package com.back.doceria.pdv.dto;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
-import javax.lang.model.element.Name;
 import java.util.List;
 
-@XmlRootElement(name = "Nfce")
+@XmlRootElement(name = "NfceDanfe")
 @XmlType(propOrder = {"chaveAcesso","serie","qrCode","urlChave","ide","emit","dest","prod","total","formaPagamento"})
-public class NfceXml {
+public class NfceXmlDanfe {
 
     private String chaveAcesso;
     private String serie;
@@ -17,7 +17,7 @@ public class NfceXml {
     private String ide; // ID da nota
     private EmitenteXml emit;
     private String dest;
-    private List<ProdutoXml> prod;
+   // private List<ProdutoXml> prod;
     private Double total;
     private String formaPagamento;
 
@@ -42,7 +42,8 @@ public class NfceXml {
         return dest;
     }
 
-    public void setDest(String dest) {
+    */
+/*public void setDest(String dest) {
         this.dest = dest;
     }
     @XmlElement(name = "prod")
@@ -56,7 +57,8 @@ public class NfceXml {
     @XmlElement(name = "total")
     public Double getTotal() {
         return total;
-    }
+    }*//*
+
 
     public void setTotal(Double total) {
         this.total = total;
@@ -102,3 +104,4 @@ public class NfceXml {
         this.urlChave = urlChave;
     }
 }
+*/

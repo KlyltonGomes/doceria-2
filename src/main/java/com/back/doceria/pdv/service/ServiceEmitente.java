@@ -1,8 +1,6 @@
 package com.back.doceria.pdv.service;
 
-import com.back.doceria.pdv.dto.DtoProduto;
 import com.back.doceria.pdv.entity.Emitente;
-import com.back.doceria.pdv.entity.Produto;
 import com.back.doceria.pdv.repository.RepositoryEmitente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

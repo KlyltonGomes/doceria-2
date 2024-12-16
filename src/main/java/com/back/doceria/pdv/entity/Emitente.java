@@ -25,6 +25,6 @@ public class Emitente {
     private String inscricaoMunicipal; // Inscrição municipal (opcional)
     private String regimeTributario; // Regime tributário
 
-    @OneToOne
-    private Endereco endereco;
+    //@OneToOne
+    //private Endereco endereco;
 }

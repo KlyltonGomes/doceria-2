@@ -1,6 +1,5 @@
-package com.back.doceria.pdv.controller;
+/*package com.back.doceria.pdv.controller;
 
-import com.back.doceria.pdv.entity.Nfce;
 import com.back.doceria.pdv.service.NfceService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,13 +18,6 @@ public class ControllerNfce {
         return ResponseEntity.status(HttpStatus.CREATED).body(novaNfce);
 
     }
+    }*/
 
 
-
-
-
-
-
-
-
-}

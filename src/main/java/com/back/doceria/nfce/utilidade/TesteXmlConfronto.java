@@ -1,4 +1,4 @@
-package com.back.doceria.nfce.utilidade;
+//package com.back.doceria.nfce.utilidade;
 
 /*import com.back.doceria.nfce.integracaoSefaz.ValidadorXmlSefaz;
 

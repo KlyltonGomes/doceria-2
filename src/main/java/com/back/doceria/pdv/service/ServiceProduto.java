@@ -1,6 +1,6 @@
+/*
 package com.back.doceria.pdv.service;
 
-import com.back.doceria.pdv.dto.DtoProduto;
 import com.back.doceria.pdv.entity.Produto;
 import com.back.doceria.pdv.repository.RepositoryProduto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,11 +28,6 @@ public class ServiceProduto {
     //REMOVE
     public void removeProduto(Long id){ repositoryProduto.deleteById(id); }
 
+}*/
 
 
-
-
-
-
-
-}

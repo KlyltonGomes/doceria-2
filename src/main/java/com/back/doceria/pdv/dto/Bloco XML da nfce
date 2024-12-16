@@ -1,0 +1,9 @@
+Principais Blocos do XML da NFC-e:
+
+ide (Identificação da NFC-e): Dados da operação (UF, natureza da operação, série, número, tipo de emissão, etc.).
+emit (Emitente): Dados da empresa que emite a NFC-e.
+dest (Destinatário): Dados do consumidor (quando identificado).
+det (Detalhes dos Produtos): Produtos vendidos e informações fiscais.
+total (Totais): Valores totais da nota.
+pag (Pagamento): Formas de pagamento.
+infAdic (Informações Adicionais): Observações gerais e do contribuinte.

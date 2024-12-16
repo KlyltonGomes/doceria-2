@@ -22,7 +22,8 @@ public class FormatarCPFeCNPJ {
                 return valor.replaceAll("(\\d{3})(\\d{3})(\\d{3})(\\d{2})", "$1.$2.$3-$4");
             }
             if (valor.length() == 14){
-                return valor.replaceAll("(\\d{2})(\\d{3})(\\d{3})(\\d{4})(\\d{2})", "$1.$2.$3/$4-$5");
+                return valor.replaceAll("(\\d{2})(\\d{3})(\\d{3})(\\d{4})(\\d{2})", "$1$2$3$4$5");
+
 
             }else {
                 System.out.print("cpf 11 digito ou cnpj 14 digito");

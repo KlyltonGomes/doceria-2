@@ -1,6 +1,5 @@
 package com.back.doceria.pdv.controller;
 
-import com.back.doceria.pdv.dto.DtoProduto;
 import com.back.doceria.pdv.entity.Emitente;
 import com.back.doceria.pdv.service.ServiceEmitente;
 import org.springframework.beans.factory.annotation.Autowired;

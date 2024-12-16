@@ -1,6 +1,6 @@
+/*
 package com.back.doceria.pdv.service;
 
-import com.back.doceria.pdv.entity.Nfce;
 import com.back.doceria.pdv.entity.Produto;
 import com.back.doceria.pdv.repository.RepositoryNfce;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,3 +28,4 @@ public class NfceService {
 
 
 }
+*/

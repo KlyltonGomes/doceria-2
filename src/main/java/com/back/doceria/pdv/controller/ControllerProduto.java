@@ -1,6 +1,6 @@
+/*
 package com.back.doceria.pdv.controller;
 
-import com.back.doceria.pdv.dto.DtoProduto;
 import com.back.doceria.pdv.entity.Produto;
 import com.back.doceria.pdv.service.ServiceProduto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,3 +59,4 @@ public class ControllerProduto {
 
 
 }
+*/
